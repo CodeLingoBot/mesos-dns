@@ -55,7 +55,7 @@ func (r rrs) First(name string) (string, bool) {
 	return "", false
 }
 
-// Transform the record set into something exportable via the REST API
+// ToAXFRResourceRecordSet: Transform the record set into something exportable via the REST API
 func (r rrs) ToAXFRResourceRecordSet() models.AXFRResourceRecordSet {
 	ret := make(models.AXFRResourceRecordSet, len(r))
 	for host, values := range r {
